@@ -1,0 +1,121 @@
+*{margin: 0; padding: 0; font-family: 'Poppins';}
+body{
+    background-color: hsl(0, 0%, 91%);
+}
+.container{
+    margin: 2rem;
+}
+.header{
+    text-align: center;
+    line-height: 1.4;
+    gap: 2rem;
+}
+.header h1{
+    font-size: clamp(1.2rem, 6vw, 2.5rem);
+    /* font-size: 1.5rem; */
+    padding: 2rem 0;
+    font-weight: 200;
+}
+.header span{
+    font-weight: 600;
+    color: hsl(234, 12%, 34%);
+}
+.header p{
+    font-size: 15px;
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+    max-width: 40rem;
+    margin: 0 auto;
+}
+.cards{
+    display: flex;
+    margin: 2rem 0;
+    align-items: center;
+    flex-direction: column;
+}
+.single{
+    max-width: 18rem;
+    max-height: 16rem;
+    display: flex;
+    flex-direction: column;
+    background-color: hsl(0, 0%, 98%);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: .4rem;
+    -webkit-border-radius: .4rem;
+    -moz-border-radius: .4rem;
+    -ms-border-radius: .4rem;
+    -o-border-radius: .4rem;
+    box-shadow: 0 5px 5px 5px hsla(235, 11%, 60%, 0.274);
+}
+.single h2{
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    color: hsl(234, 12%, 34%);
+}
+.single p{
+    font-size: 13px;
+    font-weight: 400;
+    color: hsl(229, 6%, 66%);
+}
+.card-img{
+    width: 4rem;
+    margin-top: 2rem;
+    align-self: flex-end;
+}
+
+.c-1{
+    border-top: 5px solid hsl(180, 62%, 55%);
+}
+.c-2{
+    border-top: 5px solid hsl(0, 78%, 62%);
+}
+.c-3{
+    border-top: 5px solid hsl(34, 97%, 64%);
+}
+.c-4{
+    border-top: 5px solid hsl(212, 86%, 64%);
+}
+
+@media(min-width:840px){  /**  425px ට වඩා screen width එක වැඩි උනාම code එක වැඩ කරන්න ගන්නවා.  **/
+    .header{
+        gap: 1rem;
+    }
+    .cards{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+
+    }
+    .single{
+        margin-bottom: 0;
+    }
+}
+@media(min-width:1180px){
+    .container{
+        height: 97vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+    }
+    .c-1,.c-4{
+        position: relative;
+        top: 8rem;
+    }
+    .c-1{
+        order: 1;
+    }
+    .c-2{
+        order: 2;
+    }
+    .c-3{
+        order: 4;
+    }
+    .c-4{
+        order: 3;
+    }
+}
